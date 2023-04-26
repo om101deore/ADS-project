@@ -8,11 +8,8 @@ import javax.swing.JPanel;
 import java.lang.Math;
 import java.util.Stack;
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
-import java.awt.MouseInfo;
-import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 
 public class MyPanel extends JPanel{
@@ -20,19 +17,6 @@ public class MyPanel extends JPanel{
     Scanner sc = new Scanner(System.in);
 
     int pathLength, expand;
-
-    int mazeArr1[][] = {
-        { 0, 0, 0, 1, 1, 1, 0, 1, 0, 0},
-        { 0, 1, 0, 0, 1, 0, 0, 0, 0, 0},
-        { 1, 1, 0, 1, 1, 1, 0, 1, 1, 1},
-        { 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        { 0, 1, 0, 1, 1, 1, 0, 1, 1, 1},
-        { 0, 1, 0, 1, 0, 0, 0, 1, 1, 1},
-        { 0, 0, 0, 0, 0, 1, 1, 1, 1, 0},
-        { 1, 1, 0, 1, 0, 1, 1, 1, 0, 0},
-        { 1, 1, 0, 1, 0, 0, 0, 0, 0, 1},
-        { 0, 0, 0, 1, 1, 1, 1, 0, 1, 1}
-    };
 
     int mazeArr2[][] = {
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -340,31 +324,4 @@ public class MyPanel extends JPanel{
     } 
 }
 
-/**
- * InnerMyPanel
- */
-class OrderedPair {
-    public int x;
-    public int y;
-
-    OrderedPair(int x, int y){
-        
-        
-        this.x = x;
-        this.y = y;
-    }
-}
-
-/**
- * SquarePair
- */
-class SquarePair {
-    Square from;
-    Square to;
-
-    SquarePair(Square from, Square to){
-        this.from = from;
-        this.to = to;
-    }
-}
 
